@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+body {
+  background-color: #051118;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.searchForm {
+  background: rgb(0, 0, 0, 0);
+  border: 1px solid #ffffff1a;
+  color: white;
+}
+
+.searchBtn {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 0
+}
+
+.navB {
+  margin: 5px;
+}
+
+.hero {
+  background: linear-gradient(147deg, #3a46713c 0%, #1039362f 74%);
+  font-family: 'Noto Sans', sans-serif;
+  color: #dcf3ff;
+}
+
+.card::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar {
+  position: sticky;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card {
+  background: linear-gradient(147deg, #3a46713c 0%, #1039362f 74%);
+  color: #dcf3ff;
+}
+
+.searching {
+  text-decoration: underline;
+}
+
+.welcome {
+  background-color: #dcf3ff;
+  color: #3a4671;
+}
+
+.errorImg {
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0;
+}
+
+.card-date {
+  color: #dcf3ff;
+}
+
+.genres-list {
+  list-style-type: none;
+}
+
+.companies {
+  align-self: center;
+}
