@@ -1,19 +1,19 @@
-import { useNavigate, Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import maglass from '../media/maglass.svg'
 
-const Navbar = ({ searchText, setSearchText }) => {
-
+const Navbar = ({searchText, setSearchText, inputText, setInputText}) => {
     const navigate = useNavigate()
 
-    const updateSearchText = e => {
-        navigate("/search");
-        setSearchText(e.target.value)
+    const updateInputText = (e) => {
+        setInputText(e.target.value)
     }
 
-    const searchSubmit = e => {
-        e.preventDefault()
-        document.querySelector('.searchForm').value = ''
+    const submitSearch = clicked => {
+        clicked.preventDefault()
+        navigate('/search')
+        setSearchText(inputText)
+        setInputText("")
     }
 
     return (
@@ -42,15 +42,15 @@ const Navbar = ({ searchText, setSearchText }) => {
                                 </Link>
                             </li>
                         </ul>
-                        <form className="d-flex">
+                        <form className="d-flex" role="search">
                             <input
                             className="form-control me-2 searchForm"
                             type="search"
                             aria-label="Search"
-                            value={searchText}
-							onChange={updateSearchText}
+                            value= {inputText}
+                            onChange={updateInputText}
                             />
-                            <button className="btn btn-outline-secondary searchBtn fw-bold" type="submit" onClick={searchSubmit}>
+                            <button className="btn btn-outline-secondary searchBtn fw-bold" type="submit" onClick={submitSearch}>
                                 <img className="maglass" src={maglass} alt="search" width={20} />
                             </button>
                         </form>

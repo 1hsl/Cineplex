@@ -13,6 +13,7 @@ function App() {
 
   const [searchResults, setSearchResults] = useState([]);
   const [searchText, setSearchText] = useState('');
+  const [inputText, setInputText] = useState('');
 
   useEffect(() => {
     if(searchText) {
@@ -27,7 +28,12 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Navbar searchText={searchText} setSearchText={setSearchText} />
+        <Navbar 
+        searchText={searchText}
+        setSearchText={setSearchText}
+        inputText={inputText}
+        setInputText={setInputText} 
+        />
       <Routes>
         <Route path="/" element={<Home />} exact />
         <Route path="/about" element={<About />} />
